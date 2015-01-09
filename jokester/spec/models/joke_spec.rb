@@ -7,4 +7,10 @@ describe Joke do
 			expect(j.class).to eq(Joke)
 		end
 	end
+
+	it { should validate_presence_of(:body)} 
+
+	it { should belong_to(:user)}
+	it { should have_many(:comments)}
+
 end
