@@ -11,8 +11,7 @@ describe User do
 
 	it { should validate_presence_of(:name)} 
 	it { should validate_presence_of(:email)} #email?
-	it { should validate_presence_of(:password)} #password?
-	it { should validate_presence_of(:password_confirmation)} #confirm password?
+	it { should validate_presence_of(:encrypted_password)} #password?
 
 	it { should have_many(:jokes)}
 	it { should have_many(:comments)}

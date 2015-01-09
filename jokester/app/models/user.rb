@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :jokes
   has_many :comments
+
+  validates :name, presence: true
+  validates :encrypted_password, presence: true
 end
