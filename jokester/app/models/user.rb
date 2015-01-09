@@ -9,8 +9,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation
 
 
-  has_many :jokes
-  has_many :comments
+  has_many :jokes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :name, presence: true
   validates :encrypted_password, presence: true
