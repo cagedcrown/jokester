@@ -14,7 +14,12 @@ class JokesController < ApplicationController
 	end
 
 	def create
-		@joke = Joke.create(joke_params)
+		@joke = Joke.new(joke_params)
+		if @joke.save
+			redirect_to @joke
+		else
+			redirect_to 'new'
+		end
 	end
 
 	def edit
