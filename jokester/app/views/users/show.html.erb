@@ -1,1 +1,9 @@
-show.html.erb
+<h1>Check out this Jokester!</h1>
+
+<h2><%= @user.name %></h2>
+
+<div class="user_jokes">
+	<% @jokes.each do |joke| %>
+	<%= link_to joke.body, joke_path(joke) %>
+	<% end %>
+</div>
