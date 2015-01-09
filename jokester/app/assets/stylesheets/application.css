@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	text-align: center;
+	width: 100%;
+	font-family: "Avenir";
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+input,
+textarea{
+	margin: 18px auto;
+	display: block;
+}
+
+small{
+	font-weight: lighter;
+}
