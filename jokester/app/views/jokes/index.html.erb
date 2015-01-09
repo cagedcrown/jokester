@@ -1,1 +1,3 @@
-<%= @jokes.all %>
+<% @jokes.each do |joke| %>
+	<%= joke.body	%>
+<% end %>
