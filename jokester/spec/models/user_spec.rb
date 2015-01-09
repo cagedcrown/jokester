@@ -17,19 +17,6 @@ describe User do
 	#it { should validate_uniqueness_of(:email)}
 
 
-	describe "#sign_out" do
-		it "can sign out" do
-
-		end
-	end
 end
 
-describe UsersController do
-	login_user
-
-	it "should have a current_user" do 
-		subject.current_user.should_not be_nil
-	end
-
-end
 
