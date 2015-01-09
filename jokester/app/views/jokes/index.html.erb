@@ -1,1 +1,32 @@
+<<<<<<< HEAD
 <%= @jokes.inspect %>
+=======
+<ul>
+<% @jokes.each do |joke| %>
+	<li>
+	<%= link_to joke.body, joke_path(joke.id)	%>
+	<br>
+
+	by <%= link_to joke.user.name.capitalize, user_path(joke.user_id) %>
+	
+	<br><br>
+
+	Vote count: <%= joke.votes_for.size %>
+	
+	<br><br>
+
+	<% if joke.comments.length > 0 %>
+		Comments:
+		<br>
+
+		<ul>
+		<% joke.comments.each do |comment| %>
+			<li><%= link_to comment.user.name.capitalize, user_path(joke.user_id) %>: <%= link_to comment.body, joke_comment_path(joke.id, comment.id) %></li>
+		<% end %>
+		</ul>
+
+	<% end %>
+	</li>
+<% end %>
+</ul>
+>>>>>>> emilymcafee-master
