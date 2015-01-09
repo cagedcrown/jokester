@@ -5,11 +5,11 @@
 		<br>
 
 		by <%= link_to joke.user.name.capitalize, user_path(joke.user_id) %>
-		
+
 		<br><br>
 
 		Vote count: <%= joke.votes_for.size %>
-		
+
 		<br><br>
 
 		<% if joke.comments.length > 0 %>
@@ -18,7 +18,7 @@
 		<div>
 			<ul>
 				<% joke.comments.each do |comment| %>
-				<li><%= link_to comment.user.name.capitalize, user_path(joke.user_id) %>: <%= link_to comment.body, joke_comment_path(joke.id, comment.id) %></li>
+				<li><strong><%= link_to comment.user.name.capitalize, user_path(joke.user_id) %> </strong><%= link_to comment.body, joke_comment_path(joke.id, comment.id) %></li>
 				<% end %>
 			</div>
 		</ul>
