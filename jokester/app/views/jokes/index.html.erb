@@ -1,28 +1,29 @@
 <ul>
-<% @jokes.each do |joke| %>
+	<% @jokes.each do |joke| %>
 	<li>
-	<%= link_to joke.body, joke_path(joke.id)	%>
-	<br>
-
-	by <%= link_to joke.user.name.capitalize, user_path(joke.user_id) %>
-	
-	<br><br>
-
-	Vote count: <%= joke.votes_for.size %>
-	
-	<br><br>
-
-	<% if joke.comments.length > 0 %>
-		Comments:
+		<%= link_to joke.body, joke_path(joke.id)	%>
 		<br>
 
-		<ul>
-		<% joke.comments.each do |comment| %>
-			<li><%= link_to comment.user.name.capitalize, user_path(joke.user_id) %>: <%= link_to comment.body, joke_comment_path(joke.id, comment.id) %></li>
-		<% end %>
+		by <%= link_to joke.user.name.capitalize, user_path(joke.user_id) %>
+		
+		<br><br>
+
+		Vote count: <%= joke.votes_for.size %>
+		
+		<br><br>
+
+		<% if joke.comments.length > 0 %>
+		Comments:
+		<br>
+		<div>
+			<ul>
+				<% joke.comments.each do |comment| %>
+				<li><%= link_to comment.user.name.capitalize, user_path(joke.user_id) %>: <%= link_to comment.body, joke_comment_path(joke.id, comment.id) %></li>
+				<% end %>
+			</div>
 		</ul>
 
-	<% end %>
+		<% end %>
 	</li>
-<% end %>
+	<% end %>
 </ul>
