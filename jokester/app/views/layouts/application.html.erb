@@ -7,15 +7,20 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="logo">
+	<a href="/"<><img src="/logo_small"></a>
+	</div>
 
 	<header>
 		<div class="nav">
 			<ul>
-				<li class="home"><a href="#">Home</a></li>
-				<li class="tutorials"><a class="active" href="#">Login</a></li>
-				<li class="about"><a href="#">Sign Out</a></li>
-				<li class="news"><a href="#">About</a></li>
-				<li class="contact"><a href="#">Contact</a></li>
+				<li class="home"><a href="/jokes">Home</a></li>
+
+				<li class="favorites"><a href="#">Favorites</a></li>
+				<li class="about"><a href="#">About Us</a></li>
+				<li class="loginn"><a href="/users/sign_in">Login</a></li>
+				<li class="signup"><a href="/users/sign_up">Sign Up</a></li>
+				<li class="signout"><a href=" /users/sign_out">Sign Out</a></li>
 			</ul>
 		</div>
 	</header>

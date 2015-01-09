@@ -37,7 +37,9 @@ textarea{
 small{
 	font-weight: lighter;
 }
- 
+.logo {
+	vertical-align: center;
+} 
 .nav ul {
   list-style: none;
   background-color: #444;
