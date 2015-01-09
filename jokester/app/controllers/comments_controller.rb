@@ -14,7 +14,12 @@ before_action :set_comment, only: [:show, :edit, :update, :destroy]
 	end
 
 	def create
-		@comment = Comment.create(joke_params)
+		@comment = Comment.new(joke_params)
+		if @comment.save
+			redirect_to @comment
+		else
+			redirect_to 'new'
+		end
 	end
 
 	def edit
