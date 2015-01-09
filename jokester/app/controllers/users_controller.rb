@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	# before_action :authenticate_user!
+	before_action :authenticate_user!
 
 	def index
 		@users = User.all
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			redirect_to @user
+			redirect_to jokes_path
 		else
 			redirect_to 'new'
 		end
