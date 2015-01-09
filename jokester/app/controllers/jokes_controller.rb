@@ -1,4 +1,4 @@
-class Comments < ApplicationController
+class Jokes < ApplicationController
 
 	# before_action :authenticate_user!
 
