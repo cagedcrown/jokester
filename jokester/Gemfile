@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 #User Auth
 gem 'devise', '~> 3.4.1'
-gem 'protected_attributes'
+#gem 'protected_attributes'
 
 #votable
 gem 'acts_as_votable'
