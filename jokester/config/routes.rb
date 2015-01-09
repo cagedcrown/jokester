@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 	resources :jokes do 
 		resources :comments
 	end
-
+	
+	root "jokes#index"
+  
   devise_for :users
   
-  root "jokes#index"
 end
