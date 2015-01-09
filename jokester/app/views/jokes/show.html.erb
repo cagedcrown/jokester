@@ -1,1 +1,22 @@
-show.html.erb
+	<%= @joke.body	%>
+	<br>
+
+	by <%= link_to @joke.user.name.capitalize, user_path(@joke.user_id) %>
+	
+	<br><br>
+
+	Vote count: <%= @joke.votes_for.size %>
+	
+	<br><br>
+
+	<% if @joke.comments.length > 0 %>
+		Comments:
+		<br>
+
+		<ul>
+		<% @joke.comments.each do |comment| %>
+			<li><%= comment.user.name.capitalize %>: <%= comment.body %></li>
+		<% end %>
+		</ul>
+
+	<% end %>
